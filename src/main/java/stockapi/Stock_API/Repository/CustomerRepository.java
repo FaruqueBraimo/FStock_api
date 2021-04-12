@@ -5,10 +5,17 @@
  */
 package stockapi.Stock_API.Repository;
 
+import java.util.UUID;
+import org.springframework.data.jpa.repository.JpaRepository;
+import stockapi.Stock_API.Models.Customers;
+
 /**
  *
  * @author faruq
  */
-public class CustomerRepository {
+public interface CustomerRepository extends JpaRepository<Customers, UUID>  {
+    Customers findByCustomerId(UUID customerId) ;
+        
+    
     
 }
