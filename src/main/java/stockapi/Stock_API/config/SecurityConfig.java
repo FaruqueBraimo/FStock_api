@@ -29,5 +29,6 @@ public class SecurityConfig extends WebSecurityConfiguration{
   public PasswordEncoder passwordEnconder(){
       return new  BCryptPasswordEncoder();
       
+      
   }
 }
